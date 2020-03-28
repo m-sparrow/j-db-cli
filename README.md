@@ -1,5 +1,5 @@
 # j-db-cli
-j-db-cli is a client interface build on top of [j-db core engine] ()
+j-db-cli is a client interface build on top of [j-db core engine] (https://github.com/m-sparrow/j-db)
 
 ## Syntax
 
