@@ -9,6 +9,7 @@ var argv = require('yargs')
     .command('create-table', 'Create a new table')
     .command('put-item', 'Add new item to the table')
     .command('get-item', 'Retrieve item from table')
+    .command('get-item-at', 'Retrieve item from table')
     .command('update-item', 'Update an existing item in table')
     .command('delete-item', 'Delete an item from table')
     .command('add-item-element', 'Add an element to an Item')
@@ -20,6 +21,7 @@ var argv = require('yargs')
     .example('$0 create-table -d [db-name] -t [table-name] -o [schema]','')
     .example('$0 put-item -d [db-name] -t [table-name] -o [options]', '')
     .example('$0 get-item -d [db-name] -t [table-name] -o [options]', '')
+    .example('$0 get-item-at -d [db-name] -t [table-name] -o [options]', '')
     .example('$0 update-item -d [db-name] -t [table-name] -o [options]', '')
     .example('$0 delete-item -d [db-name] -t [table-name] -o [options]', '')
     .example('$0 add-item-element -d [db-name] -t [table-name] -o [options]', '')
@@ -64,6 +66,9 @@ var argv = require('yargs')
         break
       case "get-item":
         console.log(index.getItem(argv.db, argv.table, JSON.parse(argv.options, 'utf8')))
+        break
+      case "get-item-at":
+        console.log(index.getItemAt(argv.db, argv.table, JSON.parse(argv.options, 'utf8')))
         break
       case "update-item":
         console.log(index.updateItem(argv.db, argv.table, JSON.parse(argv.options, 'utf8')))
