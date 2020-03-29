@@ -1,6 +1,6 @@
 {
   "name": "j-db-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "cli/jdb-cli.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "j-db-core": "^1.0.1",
+    "j-db-core": "^1.0.5",
     "yargs": "^15.3.1"
   }
 }
